@@ -9,7 +9,7 @@ Welcome to the Chat with Scientific Document repository! This innovative web app
 Before running the application, ensure you have the following installed:
 - Python 3.8 or higher
 - Flask
-- 
+
 ### Installation
 To get the application running on your local machine, follow these steps:
 
@@ -50,10 +50,5 @@ With the prerequisites installed and the repository set up, you can now run the 
 
 ## Support
 If you encounter any issues or have questions, please file an issue on the GitHub repository issue tracker.
-
-## License
-This project is licensed under the MIT License - see the `LICENSE` file for details.
-
----
 
 Thank you for using Chat with Scientific Document!
