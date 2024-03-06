@@ -216,7 +216,7 @@ def ask_question():
     response = requests.post(
         "https://api.openai.com/v1/chat/completions",
         headers={
-            "Authorization": f"Bearer {'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'}",
+            "Authorization": f"Bearer {YOUR OPEN_AI_API KEY}",
             "Content-Type": "application/json",
         },
         json={
