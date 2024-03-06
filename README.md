@@ -17,7 +17,16 @@ To get the application running on your local machine, follow these steps:
    - Navigate to the [Chat with Scientific Document GitHub page](https://github.com/Krishnapopat/ChatwithScientificdocument).
    - Click on the `Code` button and download the ZIP file of the repository.
    - Unzip the file on your local machine.
-
+2. **Install Dependencies**
+   - Open your terminal or command prompt.
+   - Change the directory to the folder where you unzipped the files. For example:
+     ```bash
+     cd path/to/ChatwithScientificdocument
+     ```
+   - Install the required Python packages by running:
+     ```bash
+     pip install -r requirements.txt
+     ```
 ### Running the Application
 With the prerequisites installed and the repository set up, you can now run the application:
 
