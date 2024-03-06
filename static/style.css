@@ -1,0 +1,93 @@
+body {
+    font-family: 'DM Sans';
+    background: linear-gradient(to bottom right, #ffffff, #7FC7D9);
+    margin: 0;
+    padding: 0;
+}
+
+
+.card {
+    width: 200px;
+    height: 250px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    font-family: 'DM Sans';
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: opacity 1s ease;
+    /* Added transition */
+}
+
+.card p {
+    margin-top: auto;
+}
+
+.card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 30px;
+    height: auto;
+}
+
+.gradient-text {
+    background: linear-gradient(to left, #0F1040, #7FC7D9);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.search-section {
+    opacity: 1;
+    /* Initially visible */
+    transition: opacity 1s ease;
+    /* Added transition */
+    height: auto;
+    /* Ensure search section doesn't have fixed height */
+}
+
+.vanish {
+    opacity: 0;
+    /* Fade out */
+    height: 0;
+    /* Hide */
+}
+
+.custom-upload-button {
+    background-color: #069ea9;
+    opacity: 0.8;
+    color: white;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.custom-upload-button:hover {
+    background-color: #2779bd;
+}
+
+
+#chatbox {
+    height: 60vh;
+    overflow: auto;
+    padding: 10px;
+    position: relative;
+}
+
+/* Hide default scrollbar */
+#chatbox::-webkit-scrollbar {
+    width: 0;
+}
+
+body, html {
+    overflow: hidden;
+}
