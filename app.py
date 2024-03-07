@@ -14,7 +14,7 @@ import easyocr
 import matplotlib.pyplot as plt
 from IPython.display import Image
 from pylab import rcParams
-
+import numpy as np
 
 load_dotenv()
 
@@ -216,7 +216,7 @@ def ask_question():
     response = requests.post(
         "https://api.openai.com/v1/chat/completions",
         headers={
-            "Authorization": f"Bearer {YOUR OPEN_AI_API KEY}",
+            "Authorization": f"Bearer {OPENAI_API_KEY}",
             "Content-Type": "application/json",
         },
         json={
