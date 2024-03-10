@@ -7,14 +7,14 @@ from dotenv import load_dotenv
 from sentence_transformers import SentenceTransformer, util
 from pptx import Presentation
 import docx
-import textract
+# import textract
 import re
 import cv2
 import easyocr
 import matplotlib.pyplot as plt
 from IPython.display import Image
 from pylab import rcParams
-import numpy as np
+
 
 load_dotenv()
 
@@ -135,23 +135,23 @@ def extract_text_from_tex(tex_content):
         return None
 
 
-def extract_text_from_doc(doc_file):
-    """
-    Extract text from a .doc file.
+# def extract_text_from_doc(doc_file):
+#     """
+#     Extract text from a .doc file.
     
-    Args:
-    - doc_file: Path to the .doc file
+#     Args:
+#     - doc_file: Path to the .doc file
     
-    Returns:
-    - text: Extracted text from the .doc file
-    """
-    try:
-        # Use textract to extract text from .doc files
-        text = textract.process(doc_file).decode("utf-8")
-        return text
-    except Exception as e:
-        print(f"Error extracting text from .doc file: {e}")
-        return None
+#     Returns:
+#     - text: Extracted text from the .doc file
+#     """
+#     try:
+#         # Use textract to extract text from .doc files
+#         text = textract.process(doc_file).decode("utf-8")
+#         return text
+#     except Exception as e:
+#         print(f"Error extracting text from .doc file: {e}")
+#         return None
 
 
 @app.route('/')
@@ -182,10 +182,10 @@ def upload_file():
             document_text = extract_text_from_tex(file.read())
             print(document_text)
             return jsonify({"text": document_text}), 200
-        elif file_extension == 'doc':
-            document_text = extract_text_from_doc(file)
-            # print(document_text)
-            return jsonify({"text": document_text}), 200
+        # elif file_extension == 'doc':
+        #     document_text = extract_text_from_doc(file)
+        #     # print(document_text)
+        #     return jsonify({"text": document_text}), 200
         elif file_extension == 'txt':
             document_text = extract_text_from_txt(file)
             # print(document_text)
